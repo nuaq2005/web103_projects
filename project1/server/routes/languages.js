@@ -12,6 +12,6 @@ router.get('/', (req, res) => {
 })
 
 router.get('/:languageId', (req, res) => {
-  res.status(200).sendFile(path.resolve(__dirname, '../../public/language.html'))
+  res.status(200).sendFile(path.resolve(__dirname, '../../front-end/public/language.html'))
 })
 export default router

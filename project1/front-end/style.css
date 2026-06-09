@@ -1,83 +1,71 @@
-/* Root Styles CSS */
-:root {
-    background-color: white;
-    font-family: Avenir, Helvetica, sans-serif;
-    color: black;
+@import "@picocss/pico/css/pico.min.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* Header CSS */
 .header-container {
-    overflow: hidden;
-    padding: 20px 10px;
-    padding-bottom: 60px;
-  }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px 40px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
 .header-left {
-    float: left;
-    height: 100px;
-    width: 310px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
 }
 
 .header-left img {
-    padding-top: 8px;
-    height: 80px;
+    height: 60px;
+    max-width: 100%;
 }
 
 .header-left h1 {
-    float: right;
-    font-size: 45px;
-    
+    font-size: clamp(20px, 4vw, 45px);
+    white-space: nowrap;
 }
 
 .header-right {
-    float: right;
-    padding-top:30px;
-    padding-right:10px;
-}
-
-.header-right button {
-  background-color: white;
-  border: solid;
-  border-width: 3px;
-  border-color: rgb(3, 7, 89);
-  border-radius: 0.1rem;
-  border-radius: 16px;
-  box-sizing: border-box;
-  color:  rgb(3, 7, 89);
-  cursor: pointer;
-  padding: 15px 16px;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  width: 80px;
+    display: flex;
+    align-items: center;
 }
 
 /* Home page CSS */
 
 main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 .card {
-    width: 300px;
-    height: 400px;
-    background: transparent;
-    border-style: solid;
-    border-width: 3px;
-    border-color: rgb(3, 7, 89);
+    width: 100%;
+    max-width: 320px;
+    height: 420px;
+    margin: 0 auto;
+    border: 3px solid rgb(3, 7, 89);
     border-radius: 0.3rem;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.057);
-    margin-top: 0px;
-    margin-left: 20px;
-    margin-right: 40px;
-    margin-bottom: 60px;
+    overflow: hidden;
 }
 
 .card img {
-    height: 100%;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
 .top-container {
@@ -105,6 +93,7 @@ main {
     color: rgb(228, 16, 133);
     text-decoration: none;
 }
+
 
 /* 404 Page CSS */
 
@@ -136,20 +125,27 @@ main {
 
 /* Detail Page CSS*/
 
-.gift-info {
+.language-info {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
 }
 
 .image-container {
-    padding-left: 100px;
-    width: 40vw;
+    flex: 1 1 300px;
+    max-width: 400px;
+    padding: 0;
 }
 
 .image-container img {
-    width: 80%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .gift-details {
-    width: 45vw;
+    flex: 1 1 300px;
+    max-width: 500px;
 }

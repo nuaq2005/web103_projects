@@ -6,11 +6,11 @@ const renderLanguage = async () => {
     let language
     if(data){
         language = data.find(language => language.id === requestedID)
-        document.getElementById('image').src = language.image
         document.getElementById('name').textContent = language.name
-        document.getElementById('year-created').textContent = 'Created: ' + language.language
+        document.getElementById('creator').textContent = language.creator
+        document.getElementById('yearCreated').textContent = 'Created: ' + language.yearCreated
         document.getElementById('description').textContent = language.description
-        document.title = `UnEarthed - ${language.name}`
+        document.title = `Language Learner - ${language.name}`
     } else{
         const message = document.createElement('h2')
         message.textContent = 'Not Available 😞'
