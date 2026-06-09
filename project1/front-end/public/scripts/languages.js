@@ -2,7 +2,6 @@ const mainContent = document.querySelector('#main-content')
 
 const renderLanguages = async () => {
    const response = await fetch ('/languages')
-   console.log(response);
    const data = await response.json()
 
    const mainContent = document.getElementById('main-content')
