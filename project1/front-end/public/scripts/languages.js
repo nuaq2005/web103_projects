@@ -35,7 +35,7 @@ const renderLanguages = async () => {
         bottomContainer.appendChild(description)
 
         const link = document.createElement('a')
-        link.textContent = 'Read More >'
+        link.textContent = 'Info >'
         link.setAttribute('role', 'button')
         link.href = `/languages/${language.id}`
         bottomContainer.appendChild(link)
